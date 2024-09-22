@@ -1,0 +1,251 @@
+:root{
+    --blue : #003049;
+    --lightblu : #669bbc;
+    --red : #c1121f;
+    --darkred : #780000;
+    --white : #fefffe;
+    --orange : #f7a500;
+}
+
+body{
+    background-color: var(--white);
+}
+
+/* navbar */
+.navbar{
+    width: 80%;
+    margin: 20px auto;
+    border-radius:100px;
+    padding: 0 5vh;
+}
+
+.navbar ul li:hover a{
+    font-weight: bold;
+    /* font-size: 20px; */
+    color: var(--red);
+}
+
+.custom-bg{
+    background-color: var(--white);
+}
+
+.nav-item{
+    margin-right: 30px;
+}
+
+
+/* header */
+.container {
+    width: 90%;
+    padding: 20px;
+    margin-top: 6vh;
+}
+
+header > *{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.head .title {
+    color: var(--blue);
+    font-size: 2.3em;
+    margin: 20px auto;
+    font-weight: bold;
+    border-bottom: 2px solid var(--darkred);
+    max-width: 100%;
+}
+
+.head .desc {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    margin-bottom: 40px;
+    max-width: 100%;
+    display: inline-block;
+}
+
+
+
+/* footer */
+footer{
+    height: 60vh;
+    background-color: var(--blue);
+    width: 100%;
+    padding: 25px 20vh;
+    color: var(--white);
+    align-items: center;
+    gap: 20px ;
+}
+
+footer .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+}
+
+footer .contact a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer .contact a:hover{
+    font-weight: bold;
+}
+
+footer .form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form-item{
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+}
+
+.form-title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* card */
+/* driver cards */
+.driver-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2vh;
+    width: 100%;
+}
+/* Driver card styles */
+.driver-card {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    width: 300px;
+    border: 1px solid var(--lightblu);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    transition: 0.2s;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom:5px solid var(--darkred) ;
+}
+
+.card-body {
+    padding: 20px;
+    background-color: var(--white);
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--blue);
+}
+
+.card-text {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: var(--blue);
+}
+
+/* Modal styles */
+.modal-content {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header, .modal-footer {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.modal-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.modal-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.modal-body p {
+    font-size: 1em;
+    color: var(--blue);
+}
+
+@media screen  and (max-width : 768px){
+    .navbar{
+        width: 100%;
+        margin: 0 auto 20px auto;
+        border-radius:0;
+        padding: 1vh 2vh;
+    }
+
+    .carousel{
+        margin-top: 8vh;
+        height: 30vh;
+        display: block;
+    }
+
+    .container{
+        width: 100%;
+        margin-top: 0.5vh;
+    }
+
+    .title{
+        width: 50%;
+    }
+    .desc{
+        width: 100%;
+    }
+
+
+    footer{
+        height: 80vh;
+        padding: 2vh;
+    }
+    footer .form > *{
+        width: 100%;
+    }
+
+    footer .contact{
+        height: 30%;
+        text-align: center;
+    }
+
+    .form-item{
+        border-radius: 10px;
+    }
+
+    .driver-cards{
+        gap: 0;
+    }
+    .card {
+        width: 100%;
+        border: 1px solid var(--lightblu);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        justify-content: space-around;
+    }
+}

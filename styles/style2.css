@@ -1,0 +1,185 @@
+:root {
+    --blue: #003049;
+    --lightblu: #669bbc;
+    --red: #c1121f;
+    --darkred: #780000;
+    --white: #fefffe;
+    --orange: #f77f00;
+}
+
+body {
+    background-color: var(--white);
+    font-family: Arial, sans-serif;
+    color: var(--blue);
+}
+
+/* navbar */
+.navbar{
+    width: 80%;
+    margin: 20px auto;
+    border-radius:100px;
+    padding: 0 5vh;
+}
+
+.navbar ul li:hover a{
+    font-weight: bold;
+    /* font-size: 20px; */
+    color: var(--red);
+}
+
+.custom-bg{
+    background-color: var(--white);
+}
+
+.nav-item{
+    margin-right: 30px;
+}
+
+/* container */
+.container {
+    width: 60%;
+    padding: 20px;
+    margin-top: 12vh;
+}
+
+header > *{
+    text-align: left;
+}
+.head .title {
+    color: var(--blue);
+    font-size: 2.3em;
+    margin: 20px auto;
+    font-weight: bold;
+    border-bottom: 2px solid var(--darkred);
+    width: 26%;
+}
+
+.head .desc {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    margin-bottom: 40px;
+
+}
+
+/* table */
+.table {
+    margin-bottom: 40px;
+    width: 100%; /* Buat tabel agar responsif dan mengisi lebar kontainer */
+    border-collapse: collapse; /* Gabungkan batas sel pada tabel */
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--blue); /* Beri garis bawah pada setiap baris tabel */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--lightblue); /* Ganti warna latar belakang untuk baris ganjil */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: var(--orange); /* Ganti warna latar belakang untuk baris genap */
+}
+
+.table thead {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+/* footer */
+footer{
+    height: 60vh;
+    background-color: var(--blue);
+    width: 100%;
+    padding: 25px 20vh;
+    color: var(--white);
+    align-items: center;
+    gap: 20px ;
+}
+
+footer .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+}
+
+footer .contact a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer .contact a:hover{
+    font-weight: bold;
+}
+
+footer .form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form-item{
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+}
+
+.form-title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        width: 100%;
+        margin: 0 auto 20px auto;
+        border-radius:0;
+        padding: 1vh 2vh;
+    }
+
+    .carousel{
+        margin-top: 8vh;
+        height: 25vh;
+        display: block;
+    }
+
+    .container{
+        width: 100%;
+        /* margin-top: 0vh; */
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .head .title {
+        width: 50%;
+    }
+    .table-container {
+        overflow-x: scroll;
+    }
+
+    .table {
+        min-width: 500px; /* Minimal lebar tabel untuk layar kecil */
+    }
+    footer{
+        height: 80vh;
+        padding: 2vh;
+    }
+    footer .form > *{
+        width: 100%;
+    }
+
+    footer .contact{
+        height: 30%;
+        text-align: center;
+    }
+
+    .form-item{
+        border-radius: 10px;
+    }
+}

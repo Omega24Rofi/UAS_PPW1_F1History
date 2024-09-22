@@ -1,0 +1,11 @@
+.team-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2vh;
+}
+
+@media screen and (max-width:768px) {
+    .team-cards{
+        gap:0;
+    }
+}
